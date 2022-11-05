@@ -5,7 +5,7 @@ struct node
     int data;
     struct node *nxt;
 }*h,*n,*t;
-int count = 0,punda;
+int count = 0,find;
 void Llist()
 {
     n = (struct node*)malloc(sizeof(struct node));
@@ -50,10 +50,10 @@ void insertm()
     printf("new middle node => ");
     scanf("%d",&n->data);
     n->nxt = NULL;
-    printf("enter before or after punda = > ");
-    scanf("%d",&punda);
+    printf("enter before or after find = > ");
+    scanf("%d",&find);
     t = h;
-    while(t!=punda)
+    while(t!=find)
     t = t->nxt;
     n->nxt = t->nxt;
     t->nxt = n;
